@@ -11,13 +11,11 @@ const BlogDetailScreen = () => {
             </View>
 
             <ScrollView style={styles.content}>
-                {/* Image */}
                 <Image
                     source={require('@/assets/images/news_art.png')}
                     style={styles.image}
                 />
 
-                {/* Author Info */}
                 <View style={styles.authorContainer}>
                     <Text style={styles.authorText}>By Ram Roy</Text>
                     <View style={styles.iconContainer}>
@@ -44,7 +42,6 @@ const BlogDetailScreen = () => {
                     </View>
                 </View>
 
-                {/* Title and Content */}
                 <Text style={styles.title}>Make design system people want to use.</Text>
                 <Text style={styles.subtitle}>
                     Build a system that provides a unified set of UX, design rules and patterns.

@@ -1,125 +1,111 @@
+import React from 'react';
+import { View, StyleSheet, ScrollView } from 'react-native';
+import PostItem, {PostItemProps} from '@/components/postitem';
 
-const profileMenuData = [
-    {
-        displayPic: require('@/assets/images/news_art.png'),
-        title: "Make design system people want to use.",
-        likesCount: "25.5k",
-        commentCount: "5k",
-        likeIcon: require('@/assets/images/reactions.png'),
-        commentIcon: require('@/assets/images/comments.png'),
-        menuIcon: require('@/assets/images/popup.png'),
-        date: "Dec 19"
-    },
-    {
-        displayPic: require('@/assets/images/news_art.png'),
-        title: "Make design system people want to use.",
-        likesCount: "25.5k",
-        commentCount: "5k",
-        likeIcon: require('@/assets/images/reactions.png'),
-        commentIcon: require('@/assets/images/comments.png'),
-        menuIcon: require('@/assets/images/popup.png'),
-        date: "Dec 19"
-    },
-    {
-        displayPic: require('@/assets/images/news_art.png'),
-        title: "Make design system people want to use.",
-        likesCount: "25.5k",
-        commentCount: "5k",
-        likeIcon: require('@/assets/images/reactions.png'),
-        commentIcon: require('@/assets/images/comments.png'),
-        menuIcon: require('@/assets/images/popup.png'),
-        date: "Dec 19"
-    },
-    {
-        displayPic: require('@/assets/images/news_art.png'),
-        title: "Make design system people want to use.",
-        likesCount: "25.5k",
-        commentCount: "5k",
-        likeIcon: require('@/assets/images/reactions.png'),
-        commentIcon: require('@/assets/images/comments.png'),
-        menuIcon: require('@/assets/images/popup.png'),
-        date: "Dec 19"
-    },
-    {
-        displayPic: require('@/assets/images/news_art.png'),
-        title: "Make design system people want to use.",
-        likesCount: "25.5k",
-        commentCount: "5k",
-        likeIcon: require('@/assets/images/reactions.png'),
-        commentIcon: require('@/assets/images/comments.png'),
-        menuIcon: require('@/assets/images/popup.png'),
-        date: "Dec 19"
-    },
-    {
-        displayPic: require('@/assets/images/news_art.png'),
-        title: "Make design system people want to use.",
-        likesCount: "25.5k",
-        commentCount: "5k",
-        likeIcon: require('@/assets/images/reactions.png'),
-        commentIcon: require('@/assets/images/comments.png'),
-        menuIcon: require('@/assets/images/popup.png'),
-        date: "Dec 19"
-    },
-    {
-        displayPic: require('@/assets/images/news_art.png'),
-        title: "Make design system people want to use.",
-        likesCount: "25.5k",
-        commentCount: "5k",
-        likeIcon: require('@/assets/images/reactions.png'),
-        commentIcon: require('@/assets/images/comments.png'),
-        menuIcon: require('@/assets/images/popup.png'),
-        date: "Dec 19"
-    },
-    {
-        displayPic: require('@/assets/images/news_art.png'),
-        title: "Make design system people want to use.",
-        likesCount: "25.5k",
-        commentCount: "5k",
-        likeIcon: require('@/assets/images/reactions.png'),
-        commentIcon: require('@/assets/images/comments.png'),
-        menuIcon: require('@/assets/images/popup.png'),
-        date: "Dec 19"
-    },
-    {
-        displayPic: require('@/assets/images/news_art.png'),
-        title: "Make design system people want to use.",
-        likesCount: "25.5k",
-        commentCount: "5k",
-        likeIcon: require('@/assets/images/reactions.png'),
-        commentIcon: require('@/assets/images/comments.png'),
-        menuIcon: require('@/assets/images/popup.png'),
-        date: "Dec 19"
-    },
-    {
-        displayPic: require('@/assets/images/news_art.png'),
-        title: "Make design system people want to use.",
-        likesCount: "25.5k",
-        commentCount: "5k",
-        likeIcon: require('@/assets/images/reactions.png'),
-        commentIcon: require('@/assets/images/comments.png'),
-        menuIcon: require('@/assets/images/popup.png'),
-        date: "Dec 19"
-    },
-    {
-        displayPic: require('@/assets/images/news_art.png'),
-        title: "Make design system people want to use.",
-        likesCount: "25.5k",
-        commentCount: "5k",
-        likeIcon: require('@/assets/images/reactions.png'),
-        commentIcon: require('@/assets/images/comments.png'),
-        menuIcon: require('@/assets/images/popup.png'),
-        date: "Dec 19"
-    },
-    {
-        displayPic: require('@/assets/images/news_art.png'),
-        title: "Make design system people want to use.",
-        likesCount: "25.5k",
-        commentCount: "5k",
-        likeIcon: require('@/assets/images/reactions.png'),
-        commentIcon: require('@/assets/images/comments.png'),
-        menuIcon: require('@/assets/images/popup.png'),
-        date: "Dec 19"
-    },
+const postData: PostItemProps[] = [
+  {
+    image: require('@/assets/images/news_art.png'),
+    date: "19 Dec",
+    title: "Make design system people want to use.",
+    likes: "25.5k",
+    comments: "5k"
+  },
+  {
+    image: require('@/assets/images/news_art.png'),
+    date: "19 Dec",
+    title: "Make design system people want to use.",
+    likes: "25.5k",
+    comments: "5k"
+  },
+  {
+    image: require('@/assets/images/news_art.png'),
+    date: "19 Dec",
+    title: "Make design system people want to use.",
+    likes: "25.5k",
+    comments: "5k"
+  },
+  {
+    image: require('@/assets/images/news_art.png'),
+    date: "19 Dec",
+    title: "Make design system people want to use.",
+    likes: "25.5k",
+    comments: "5k"
+  },
+  {
+    image: require('@/assets/images/news_art.png'),
+    date: "19 Dec",
+    title: "Make design system people want to use.",
+    likes: "25.5k",
+    comments: "5k"
+  },
+  {
+    image: require('@/assets/images/news_art.png'),
+    date: "19 Dec",
+    title: "Make design system people want to use.",
+    likes: "25.5k",
+    comments: "5k"
+  },
+  {
+    image: require('@/assets/images/news_art.png'),
+    date: "19 Dec",
+    title: "Make design system people want to use.",
+    likes: "25.5k",
+    comments: "5k"
+  },
+  {
+    image: require('@/assets/images/news_art.png'),
+    date: "19 Dec",
+    title: "Make design system people want to use.",
+    likes: "25.5k",
+    comments: "5k"
+  },
+  {
+    image: require('@/assets/images/news_art.png'),
+    date: "19 Dec",
+    title: "Make design system people want to use.",
+    likes: "25.5k",
+    comments: "5k"
+  },
+  {
+    image: require('@/assets/images/news_art.png'),
+    date: "19 Dec",
+    title: "Make design system people want to use.",
+    likes: "25.5k",
+    comments: "5k"
+  },
+  {
+    image: require('@/assets/images/news_art.png'),
+    date: "19 Dec",
+    title: "Make design system people want to use.",
+    likes: "25.5k",
+    comments: "5k"
+  },
+  {
+    image: require('@/assets/images/news_art.png'),
+    date: "19 Dec",
+    title: "Make design system people want to use.",
+    likes: "25.5k",
+    comments: "5k"
+  },
 ];
 
-export default profileMenuData;
+const PostList: React.FC = () => {
+  return (
+    <View style={styles.postListContainer}>
+      <ScrollView>
+        {postData.map((post, index) => (
+          <PostItem key={index} {...post} />
+        ))}
+      </ScrollView>
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  postListContainer: {
+    paddingHorizontal: 25,
+    marginTop: 15,
+  },
+});
+
+export default PostList;

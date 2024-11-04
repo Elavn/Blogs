@@ -1,19 +1,37 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, StyleSheet, Image, Text, ScrollView } from 'react-native';
+import Header from '../header';
+import UserInfo from '../userinfo';
+import PostItem from '../postitem';
 
-const HomeTab = () => (
-    <View style={styles.container}>
-        <Text>First Tab Content</Text>
+const ProfileScreen: React.FC = () => {
+  return (
+    <View style={styles.profileContainer}>
+      <ScrollView>
+        <Header />
+        <UserInfo />
+        <View style={styles.divider} />
+        <PostItem />
+      </ScrollView>
     </View>
-);
+  );
+};
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#ff4081',
-    },
+  profileContainer: {
+    flex: 1,
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    maxWidth: 480,
+    width: '100%',
+  },
+  divider: {
+    borderColor: 'rgba(214, 211, 211, 1)',
+    borderStyle: 'solid',
+    borderWidth: 1,
+    width: '100%',
+    marginTop: 15,
+  },
 });
 
-export default HomeTab;
+export default ProfileScreen;
